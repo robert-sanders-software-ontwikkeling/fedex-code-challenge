@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="signup()" class="c-signup-form"> 
+    <app-input 
+        formControlName="firstName"
+        type="text" 
+        label="First name" 
+        [errors]="firstNameErrors">
+    </app-input>
+    <app-input 
+        type="text" 
+        label="Last name" 
+        formControlName="lastName"
+        [errors]="lastNameErrors">
+    </app-input>
+    <app-input 
+        formControlName="email"
+        type="email" 
+        label="Email" 
+        [errors]="emailErrors">
+    </app-input>
+    <app-input 
+        formControlName="password"
+        type="password" 
+        label="password" 
+        [errors]="passwordErrors">
+    </app-input>
+    <div class="c-signup-form-buttons">
+        <button *ngIf="!signingUp" type="submit">
+            Signup
+        </button>
+        <img  *ngIf="signingUp" src="assets/three-dots.svg" height="11px"/>
+    </div>
+</form>

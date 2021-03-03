@@ -1,0 +1,16 @@
+<div class="c-input">
+    <label [for]="label">{{label}}</label>
+    <div>
+        <input 
+            [id]="label"  
+            [type]="type" 
+            [disabled]="isDisabled"
+            [(ngModel)]="value" 
+            (ngModelChange)="onValueChanged()">
+        <div *ngIf="hasErrors" class="c-input-errors">
+            <small *ngFor="let error of errors">
+                {{error}}
+            </small>
+        </div>
+    </div>
+</div>

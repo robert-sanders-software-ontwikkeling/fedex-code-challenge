@@ -1,0 +1,31 @@
+
+:host {
+    display: block;
+}
+.c-input {
+    display: flex;
+    flex-direction: row;
+    input {
+        flex-grow: 1;
+        padding: 4px 4px;
+        width: 250px;
+    }
+    label {
+        position: relative;
+        top:4px;
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: no-wrap;
+    }
+
+  
+
+    &-errors {
+        color: red;
+
+        small {
+            display: block;
+        }
+    }
+}

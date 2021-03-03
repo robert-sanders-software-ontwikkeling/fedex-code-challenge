@@ -1,0 +1,24 @@
+
+
+:host { 
+    display: block;
+}
+
+.c-signup-form {
+    border: solid 1px rgba(192, 185, 185);
+    padding: 20px;
+    &-buttons {
+        padding-top: 10px;
+        text-align: right;
+
+        button {
+            padding: 4px 8px;
+        }
+    }
+
+    app-input  {
+        margin-bottom: 10px;
+    }
+    
+
+}
